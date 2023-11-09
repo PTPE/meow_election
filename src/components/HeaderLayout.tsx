@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-export default function HeaderLayout() {
+export  function HeaderLayout() {
   return (
     <div>
       header
