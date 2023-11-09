@@ -7,6 +7,7 @@ import "./index.css";
 import { GlobalStyle,ResetStyle } from "./styles";
 
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ResetStyle/>
