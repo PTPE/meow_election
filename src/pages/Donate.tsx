@@ -1,3 +1,3 @@
-export default function Donate() {
+export function Donate() {
   return <div>donate</div>;
 }

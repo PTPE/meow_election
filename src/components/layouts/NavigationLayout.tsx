@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
-export default function HeaderLayout() {
+
+export function NavigationLayout() {
   return (
     <div>
-      header
+      navigation
       <Outlet />
     </div>
   );

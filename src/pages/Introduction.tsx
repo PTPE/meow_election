@@ -1,3 +1,3 @@
-export default function Introduction() {
+export function Introduction() {
   return <div>introdiction</div>;
 }

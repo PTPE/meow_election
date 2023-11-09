@@ -1,3 +1,3 @@
-export default function PoliticalIssue() {
+export function PoliticalIssue() {
   return <div>issue</div>;
 }

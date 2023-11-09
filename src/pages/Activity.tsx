@@ -1,3 +1,3 @@
-export default function Activity() {
+export function Activity() {
   return <div>events</div>;
 }
