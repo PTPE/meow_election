@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-export default function NavigationLayout() {
+export  function NavigationLayout() {
   return (
     <div>
       navigation

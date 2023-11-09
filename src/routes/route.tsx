@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import {  createHashRouter } from "react-router-dom";
 
 import {
   Activity,
@@ -9,11 +9,12 @@ import {
   Introduction,
   PoliticalIssue,
 } from "../pages";
-import AppLayout from "../components/AppLayout";
+import { HeaderLayout, NavigationLayout } from "../components";
 
-export const AppRoutes = createBrowserRouter([
+
+export const AppRoutes = createHashRouter([
   {
-    element: <AppLayout />,
+    element: <HeaderLayout />,
     errorElement: <Error />,
     children: [
       {
@@ -21,25 +22,31 @@ export const AppRoutes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/introduction",
-        element: <Introduction />,
-      },
-      {
-        path: "/event",
-        element: <Activity />,
-      },
-      {
-        path: "/issue",
-        element: <PoliticalIssue />,
-      },
-      {
-        path: "/donate",
-        element: <Donate />,
-      },
-      {
-        path: "/feedback",
-        element: <Feedback />,
+        element: <NavigationLayout />,
+        children: [
+          {
+            path: "/introduction",
+            element: <Introduction />,
+          },
+          {
+            path: "/event",
+            element: <Activity />,
+          },
+          {
+            path: "/issue",
+            element: <PoliticalIssue />,
+          },
+          {
+            path: "/donate",
+            element: <Donate />,
+          },
+          {
+            path: "/feedback",
+            element: <Feedback />,
+          },
+        ],
       },
     ],
   },
 ]);
+
