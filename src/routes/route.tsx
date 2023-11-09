@@ -9,7 +9,7 @@ import {
   Introduction,
   PoliticalIssue,
 } from "../pages";
-import { HeaderLayout, NavigationLayout } from "../components";
+import { HeaderLayout, NavigationLayout } from "../layout";
 
 
 export const AppRoutes = createHashRouter([
