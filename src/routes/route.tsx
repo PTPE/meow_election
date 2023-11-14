@@ -1,4 +1,4 @@
-import {  createHashRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 import {
   Activity,
@@ -9,44 +9,38 @@ import {
   Introduction,
   PoliticalIssue,
 } from "../pages";
-import { HeaderLayout, NavigationLayout } from "../layout";
-
+import { Root } from "../layout/Root";
 
 export const AppRoutes = createHashRouter([
   {
-    element: <HeaderLayout />,
+    element: <Home />,
+    path: "/",
+    errorElement: <Error />,
+  },
+  {
+    element: <Root />,
     errorElement: <Error />,
     children: [
       {
-        path: "/",
-        element: <Home />,
+        path: "/introduction",
+        element: <Introduction />,
       },
       {
-        element: <NavigationLayout />,
-        children: [
-          {
-            path: "/introduction",
-            element: <Introduction />,
-          },
-          {
-            path: "/event",
-            element: <Activity />,
-          },
-          {
-            path: "/issue",
-            element: <PoliticalIssue />,
-          },
-          {
-            path: "/donate",
-            element: <Donate />,
-          },
-          {
-            path: "/feedback",
-            element: <Feedback />,
-          },
-        ],
+        path: "/event",
+        element: <Activity />,
+      },
+      {
+        path: "/issue",
+        element: <PoliticalIssue />,
+      },
+      {
+        path: "/donate",
+        element: <Donate />,
+      },
+      {
+        path: "/feedback",
+        element: <Feedback />,
       },
     ],
   },
 ]);
-
