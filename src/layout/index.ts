@@ -1,2 +1,2 @@
-export * from './HeaderLayout';
-export * from './NavigationLayout';
+export * from './Navigation';
+export * from './Header'
