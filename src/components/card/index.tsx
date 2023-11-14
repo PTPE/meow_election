@@ -3,7 +3,7 @@ import styled from "styled-components";
 type CardThemeType = "primary" | "secondary";
 
 interface CardProps {
-  theme: CardThemeType;
+  theme?: CardThemeType;
   children: React.ReactNode;
 }
 
@@ -38,7 +38,7 @@ const StyledCardSecond = styled(StyledCardBase)`
 
 const StyledCard = styled.div<{ $theme: CardThemeType }>`
   display: inline-block;
-  padding: 40px;
+  padding: 24px;
   background-color: ${(props) =>
     props.$theme === "primary" ? "#0E4FDD" : "white"};
   color: ${(props) => (props.$theme === "primary" ? "white" : "#0E4FDD")};
